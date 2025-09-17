@@ -8,7 +8,7 @@ from sklearn.metrics import mean_squared_error
 from datetime import datetime
 
 # Load and preprocess data
-file_path = "C:/Users/jseong/Desktop/congestion/final codes/wn_route.csv"
+file_path = "wn_route.csv"
 df = pd.read_csv(file_path)
 
 # Convert datetime and sort
@@ -77,3 +77,4 @@ y_test_rescaled = scaler.inverse_transform(y_test)
 # RMSE
 rmse = np.sqrt(mean_squared_error(y_test_rescaled, y_pred_rescaled))
 print(f'Test RMSE: {rmse:.2f}')
+
