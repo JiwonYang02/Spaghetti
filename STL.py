@@ -4,7 +4,7 @@ from statsmodels.tsa.seasonal import STL
 import numpy as np
 
 # File path
-file_path = 'wn_routes.csv'
+file_path = 'wn_route.csv'
 
 # Load data
 df_route = pd.read_csv(file_path)
@@ -35,3 +35,4 @@ anomaly_df = df_route[df_route['anomaly'] == True].copy()
 
 # Restore datetime as a column
 anomaly_df.reset_index(inplace=True)
+
